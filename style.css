@@ -1,8 +1,10 @@
 body {
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
-    text-align: center;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
@@ -16,23 +18,30 @@ p {
 img {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    max-width: 50%;
+    max-width: 80%;
     height: auto;
+    margin-bottom: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 button {
-    background-color: #4CAF50; /* لون الخلفية */
-    color: white; /* لون النص */
-    padding: 10px 20px; /* المسافة الداخلية للزر */
-    border: none; /* إزالة الحدود */
-    border-radius: 5px; /* حواف دائرية */
-    cursor: pointer; /* شكل المؤشر عند الوقوف على الزر */
-    font-size: 16px; /* حجم الخط */
-    margin: 5px; /* المسافة بين الأزرار */
-    transition: background-color 0.3s ease; /* تأثير الانتقال عند التفاعل */
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049; /* لون الخلفية عند تمرير الماوس */
+    background-color: #45a049;
 }
 
