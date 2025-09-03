@@ -1,34 +1,139 @@
+/* الألوان الأساسية */
+:root {
+    --bg-color: linear-gradient(to right, #e0f2f7, #d4eaf0); /* تدرج لوني فاتح */
+    --text-color: #333;
+    --secondary-text-color: #666;
+    --header-bg: #333;
+    --header-text: white;
+    --button-text: white;
+    --section-bg: #fff;
+    --shadow-color: rgba(0,0,0,0.1);
+    --link-hover: #4CAF50;
+    --notification-bg: #4CAF50;
+    --notification-text: white;
+}
+
+/* الوضع الليلي */
+body.dark-mode {
+    --bg-color: linear-gradient(to right, #2c3e50, #4a6c8e); /* تدرج لوني داكن */
+    --text-color: #f0f0f0;
+    --secondary-text-color: #ccc;
+    --header-bg: #1c2833;
+    --header-text: #f0f0f0;
+    --button-text: white;
+    --section-bg: #34495e;
+    --shadow-color: rgba(0,0,0,0.3);
+    --link-hover: #1abc9c;
+    --notification-bg: #1abc9c;
+    --notification-text: white;
+}
+
 body {
-    background-color: #f0f0f0;
+    background: var(--bg-color);
     font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* شريط الإشعارات */
+.notification-bar {
+    width: 100%;
+    background-color: var(--notification-bg);
+    color: var(--notification-text);
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.notification-bar .close-btn {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.header-bar {
+    width: 100%;
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date-time {
+    font-size: 14px;
+}
+
+.menu a {
+    color: var(--header-text);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--link-hover);
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    color: var(--header-text);
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    color: var(--link-hover);
+}
+
+.main-content {
     padding: 20px;
+    max-width: 800px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 h1 {
-    color: #333;
+    color: var(--text-color);
     text-align: center;
+    margin-top: 20px;
 }
 
 h2 {
-    color: #555;
+    color: var(--text-color);
     margin-bottom: 10px;
     text-align: center;
 }
 
 .channel-description {
-    color: #666;
+    color: var(--secondary-text-color);
     text-align: center;
     max-width: 600px;
-    margin-top: -10px;
     line-height: 1.6;
 }
 
 img {
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px var(--shadow-color);
     max-width: 80%;
     height: auto;
     margin-bottom: 20px;
@@ -49,55 +154,43 @@ img {
 }
 
 button {
-    color: white;
+    color: var(--button-text);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: filter 0.3s ease;
+    display: flex; /* لجعل الأيقونة والنص جنبًا إلى جنب */
+    align-items: center;
+    gap: 8px; /* مسافة بين الأيقونة والنص */
+}
+
+button i {
+    font-size: 18px; /* حجم الأيقونة */
 }
 
 button:hover {
-    filter: brightness(1.1); /* تأثير خفيف عند تمرير الفأرة */
+    filter: brightness(1.1);
 }
 
 /* ألوان الأزرار المخصصة لكل منصة */
-.buttons-container .youtube-btn {
-    background-color: #ff0000;
-}
-
-.buttons-container .x-btn {
-    background-color: #000000;
-}
-
-.buttons-container .tiktok-btn {
-    background-color: #fe2c55;
-}
-
-.buttons-container .instagram-btn {
-    background-image: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888, #8a3ab9);
-}
-
-.buttons-container .telegram-btn {
-    background-color: #229ed9;
-}
+.buttons-container .youtube-btn { background-color: #ff0000; }
+.buttons-container .x-btn { background-color: #000000; }
+.buttons-container .tiktok-btn { background-color: #fe2c55; }
+.buttons-container .instagram-btn { background-image: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888, #8a3ab9); }
+.buttons-container .telegram-btn { background-color: #229ed9; }
 
 .news-section {
-    background-color: #fff;
+    background-color: var(--section-bg);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px var(--shadow-color);
     padding: 20px;
     margin-top: 20px;
     text-align: center;
     max-width: 600px;
+    color: var(--text-color);
 }
 
-.news-section h2 {
-    margin-top: 0;
-}
-
-.news-section p {
-    margin: 0;
-    color: #333;
-}
+.news-section h2 { margin-top: 0; }
+.news-section p { margin: 0; color: var(--secondary-text-color); }

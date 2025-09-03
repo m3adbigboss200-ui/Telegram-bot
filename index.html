@@ -3,29 +3,52 @@
 <head>
     <title>بوت قناة دواء القلوب</title>
     <link rel="stylesheet" href="style.css">
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <h1> هذه البوت تابع لقناة دواء القلوب</h1>
-    <p class="channel-description">
-        تم إنشاء دواء القلوب وجه الله تعالى. محتوى قران كريم، مقاطع تعليميه ودروس وقصص. شاركنا الأجر والثواب.
-    </p>
-    <img src="my_image.png" alt="صورة توضيحية">
 
-    <div class="links-section">
-        <h2>مواقع الروابط</h2>
-        <div class="buttons-container">
-            <button class="youtube-btn" onclick="openYouTube()">YouTube</button>
-            <button class="x-btn" onclick="openX()">X</button>
-            <button class="tiktok-btn" onclick="openTikTok()">TikTok</button>
-            <button class="instagram-btn" onclick="openInstagram()">Instagram</button>
-            <button class="telegram-btn" onclick="openTelegram()">Telegram</button>
+    <div class="header-bar">
+        <div class="date-time" id="date-time"></div>
+        <div class="menu">
+            <a href="#updates-section">تحديثات</a>
+            <a href="#social-links">تابعنا</a>
+            <a href="about.html">من نحن</a>
+            <a href="https://t.me/MOAZSDFGHBOT" target="_blank">تواصل معنا والمشاركة</a>
+            <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </div>
 
-    <div class="news-section">
-        <h2>آخر الأخبار</h2>
-        <p>محتوى قران كريم ومقاطع تعليميه ودروس وقصص</p>
+    <div class="main-content">
+        <h1>سبحان الله و الحمد لله و الله اكبر</h1>
+        <p class="channel-description">
+            تم إنشاء دواء القلوب وجه الله تعالى. محتوى قران كريم، مقاطع تعليميه ودروس وقصص. شاركنا الأجر والثواب.
+        </p>
+        <img src="my_image.png" alt="صورة توضيحية">
+
+        <div id="social-links" class="links-section">
+            <h2>تابعنا</h2>
+            <div class="buttons-container">
+                <button class="youtube-btn" onclick="openYouTube()"><i class="fab fa-youtube"></i> YouTube</button>
+                <button class="x-btn" onclick="openX()"><i class="fab fa-twitter"></i> X</button>
+                <button class="tiktok-btn" onclick="openTikTok()"><i class="fab fa-tiktok"></i> TikTok</button>
+                <button class="instagram-btn" onclick="openInstagram()"><i class="fab fa-instagram"></i> Instagram</button>
+                <button class="telegram-btn" onclick="openTelegram()"><i class="fab fa-telegram-plane"></i> Telegram</button>
+                <button class="youtube-backup-btn" onclick="openYouTubeBackup()"><i class="fab fa-youtube"></i> القناة الاحتياطية</button>
+            </div>
         </div>
+
+        <div id="updates-section" class="news-section">
+            <h2>تحديثات</h2>
+            <p>
+                تنزل المقاطع ساعة ٨ مساءً و ٢ ظهرًا على اليوتيوب.
+                <br>
+                القناة الاحتياطية: <a href="https://youtube.com/@2_7_8_ye?si=2fuMXjZsl7o7piBT" target="_blank">https://youtube.com/@2_7_8_ye</a>
+            </p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
