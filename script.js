@@ -28,10 +28,11 @@ function updateDateTime() {
     const dateTimeElement = document.getElementById('date-time');
     const now = new Date();
 
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    const gregorianDate = now.toLocaleDateString('ar-SA', options);
+    const gregorianOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const gregorianDate = now.toLocaleDateString('ar-SA', gregorianOptions);
 
-    const hijriDate = new Intl.DateTimeFormat('ar-SA-u-ca-islamic', options).format(now);
+    const hijriOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', calendar: 'islamic-umalqura' };
+    const hijriDate = new Intl.DateTimeFormat('ar-SA-u-ca-islamic', hijriOptions).format(now);
     
     const time = now.toLocaleTimeString('ar-SA', { hour: '2-digit', minute: '2-digit', hour12: true });
 
@@ -70,12 +71,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-// إغلاق شريط الإشعارات
-function closeNotification() {
-    const notificationBar = document.getElementById('notificationBar');
-    if (notificationBar) {
-        notificationBar.style.display = 'none';
-        // يمكنك أيضًا استخدام localStorage لحفظ أن المستخدم أغلق الشريط
-    }
-}
