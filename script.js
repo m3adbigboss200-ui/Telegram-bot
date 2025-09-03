@@ -1,4 +1,3 @@
-
 function openYouTube() {
   window.open("https://youtube.com/@2_c_7_89?si=sESzRSJQ6dEsZK9P");
 }
@@ -15,3 +14,6 @@ function openInstagram() {
   window.open("https://www.instagram.com/yemen777173?igsh=MTY1dTN3Y3Z5Mng4aA==");
 }
 
+function openTelegram() {
+  window.open("https://t.me/d2_c_7_89");
+}

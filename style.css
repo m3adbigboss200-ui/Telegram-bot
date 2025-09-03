@@ -9,10 +9,21 @@ body {
 
 h1 {
     color: #333;
+    text-align: center;
 }
 
-p {
+h2 {
+    color: #555;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.channel-description {
     color: #666;
+    text-align: center;
+    max-width: 600px;
+    margin-top: -10px;
+    line-height: 1.6;
 }
 
 img {
@@ -23,15 +34,21 @@ img {
     margin-bottom: 20px;
 }
 
+.links-section {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 30px;
+    text-align: center;
+}
+
 .buttons-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 20px;
 }
 
 button {
-    background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -42,6 +59,45 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    filter: brightness(1.1); /* تأثير خفيف عند تمرير الفأرة */
 }
 
+/* ألوان الأزرار المخصصة لكل منصة */
+.buttons-container .youtube-btn {
+    background-color: #ff0000;
+}
+
+.buttons-container .x-btn {
+    background-color: #000000;
+}
+
+.buttons-container .tiktok-btn {
+    background-color: #fe2c55;
+}
+
+.buttons-container .instagram-btn {
+    background-image: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888, #8a3ab9);
+}
+
+.buttons-container .telegram-btn {
+    background-color: #229ed9;
+}
+
+.news-section {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    max-width: 600px;
+}
+
+.news-section h2 {
+    margin-top: 0;
+}
+
+.news-section p {
+    margin: 0;
+    color: #333;
+}
