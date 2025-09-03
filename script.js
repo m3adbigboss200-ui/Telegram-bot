@@ -29,7 +29,7 @@ function updateDateTime() {
     const now = new Date();
 
     const gregorianOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    const gregorianDate = now.toLocaleDateString('ar-SA', gregorianOptions);
+    const gregorianDate = now.toLocaleDateString('ar-SA-u-ca-gregory', gregorianOptions);
 
     const hijriOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', calendar: 'islamic-umalqura' };
     const hijriDate = new Intl.DateTimeFormat('ar-SA-u-ca-islamic', hijriOptions).format(now);
