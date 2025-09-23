@@ -181,9 +181,10 @@ img {
 .x-btn { background-color: #000000; }
 .tiktok-btn { background-color: #fe2c55; }
 .instagram-btn { background-image: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888, #8a3ab9); }
+.threads-btn { background-color: #000000; }
+.facebook-btn { background-color: #1877f2; }
 .telegram-btn { background-color: #229ed9; }
 .youtube-backup-btn { background-color: #ff0000; }
-
 
 .news-section {
     background-color: var(--section-bg);
@@ -198,4 +199,3 @@ img {
 
 .news-section h2 { margin-top: 0; }
 .news-section p { margin: 0; color: var(--secondary-text-color); }
-
